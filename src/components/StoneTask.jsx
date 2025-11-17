@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 import Form from './Form';
+import { useLocation } from 'react-router-dom';
 
 function StoneTask () {
+
+  let location=useLocation()
+
+  let word=location?.state || 'empty value'
+  console.log(word);
+  
     let [playerone, setplayerone]=useState('');
     let [playertwo, setplayertwo]=useState('');
     let [ans, setAns]=useState('');

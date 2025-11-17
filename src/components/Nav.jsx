@@ -5,29 +5,39 @@ import { Link, NavLink } from 'react-router-dom'
 const Nav = () => {
   return (
     <div>
-                <Link to=''>Home</Link>
+      <Link to=''>Home</Link>
 
-        <Link to='/game'>GAme</Link>
-              <Link to='/forms/formdata'><Button>Form</Button></Link>
+      <Link to='/game'>Game</Link>
+      <Link to='/forms/formdata'><Button>Form</Button></Link>
 
-              {/* <NavLink to='/game' style={({isActive})=> {color=isActive ? 'red' : 'green'}}>game</NavLink>
+      {/* <NavLink to='/game' style={({isActive})=> {color=isActive ? 'red' : 'green'}}>game</NavLink>
                               <NavLink to=''>Home</NavLink> */}
 
 
-<NavLink 
-  to='/game' 
-  style={({ isActive }) => ({ color: isActive ? 'red' : 'green' })}
->
-  game
-</NavLink>
+       <NavLink
+      to='/PerfectNumber'
+      style={({isActive})=>({ color: isActive ? 'red':'green'})}
+      >
+        PerfectNumber
+      </NavLink>
 
 
-<NavLink 
-  to='' 
-  style={({ isActive }) => ({ color: isActive ? 'red' : 'green' })}
->
-  intro
-</NavLink>
+      <NavLink
+        to='/game'
+        style={({ isActive }) => ({ color: isActive ? 'red' : 'green' })}
+      >
+        game
+      </NavLink>
+
+
+      <NavLink
+        to=''
+        style={({ isActive }) => ({ color: isActive ? 'red' : 'green' })}
+      >
+        intro
+      </NavLink>
+
+     
 
 
 

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Formdata = () => {
+   let navigate=useNavigate()
+
     let[word, setWord]=useState({name:'',age:'',language:'',gender:''})
    function get(e){
     setWord({...word,[e.target.name]:e.target.value})
@@ -12,8 +15,20 @@ const Formdata = () => {
    function sub(e){
     e.preventDefault()
     console.log(word);
+      navigate('/game',{state: word})
     
     setWord({name:'',age:'',language:'',gender:''})
+
+    // navigate('/game')  //it will navigate to tne next page
+  
+   }
+
+   let number=124
+
+   function numberHandler(){
+
+    navigate(`/perfectNumber/${number}`)
+
    }
   return (
     <div style={{textAlign:"center"}}>
@@ -38,6 +53,8 @@ const Formdata = () => {
                 </select>
 
                 <button>Submit</button>
+
+                <button onClick={numberHandler}>Go to perfect number</button>
         </form>
     </div>
   )

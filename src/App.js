@@ -49,6 +49,8 @@ function App() {
         <Route path='' element={<Intro />} />
         <Route path='/game' element={<StoneTask />} />
         <Route path='/forms/formdata' element={<Formdata />} />
+        <Route path='/PerfectNumber/:number' element={<PerfectNumber/>}/>
+        <Route path='/forms' element={<Formdata/>}/>
       </Routes>
       
       

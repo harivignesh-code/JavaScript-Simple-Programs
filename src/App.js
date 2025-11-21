@@ -16,6 +16,11 @@ import Paper from './components/Paper';
 import PerfectNumber from './components/usestatehook/PerfectNumber';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
+import ReverseString from './components/usestatehook/ReverseString';
+import MoviePage from './components/MoviePage';
+import Validation from './components/usestatehook/Validation';
+import Atm from './components/usestatehook/Atm';
+import Binding from './components/CRUD/Binding';
 
 
 
@@ -41,7 +46,7 @@ function App() {
       <Task/>
       <Unitscal/> */}
 
-      <BrowserRouter>
+      <BrowserRouter> 
             <Nav />
 
 
@@ -51,10 +56,17 @@ function App() {
         <Route path='/forms/formdata' element={<Formdata />} />
         <Route path='/PerfectNumber/:number' element={<PerfectNumber/>}/>
         <Route path='/forms' element={<Formdata/>}/>
+        <Route path='/Reverse' element={<ReverseString/>}/>
+        <Route path='/FormValidation' element={<Validation />}/>
+        <Route path='/Atm' element={<Atm />}/>
+                <Route path='/users' element={<Binding />}/>
+
+        
       </Routes>
       
       
       </BrowserRouter>
+      <MoviePage />
         
     </div>
   );

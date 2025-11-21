@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
+    let navigate=useNavigate()
     const [name, setName] = useState('');
     const [gmail, setGmail] = useState('');
     const [age, setAge] = useState('');
@@ -9,7 +11,9 @@ const Form = () => {
     const handlesubmit = (e) => {
         e.preventDefault();
         setSubmittedData(`Name: ${name}, Email: ${gmail}`);
+        navigate('/reverse',{state:{name,gmail}})
         console.log(name, gmail, age);  
+        
 
      };
     return (

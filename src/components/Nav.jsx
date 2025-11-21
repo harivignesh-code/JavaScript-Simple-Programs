@@ -37,6 +37,13 @@ const Nav = () => {
         intro
       </NavLink>
 
+      <NavLink
+        to='/reverse'
+        style={({ isActive }) => ({ color: isActive ? 'red' : 'green' })}
+        >
+          Reverse
+        </NavLink>
+
      
 
 
